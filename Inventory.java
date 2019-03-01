@@ -16,45 +16,47 @@ public class Inventory {
 	   // end program menu
 } //end method
 	static double averageCost() {
-		//Declare Variables
+			//Declare Variables
+		double average = 0.0;
+		double cost =0.0;
+		double totalValue = 0.0;
+		char answer = 'Y';	
+		
+		int number = 0;
+		int sumItems = 0;
+		int quantity = 0;
+		
+		String item = "";
+			//end declaration of variables
 	
-		
-	double average = 0.0;
-	double cost =0.0;
-	double totalValue = 0.0;
-	char answer = 'Y';	
-	int number = 0;
-	int sumItems = 0;
-	int quantity = 0;
-		
-	String item = "";
-		//end declaration of variables
+	
 	while (answer == 'y' || answer == 'Y') {
-		//Begin Inventory Evaluation
-	System.out.println("Number of Item Types:");
-	number = read.nextInt();
-	
-	for(int i = 1; i <= number; i++) {
-		System.out.println("enter the item's description");
-	    item = read.next();
-	    System.out.println("item description: " + item);
-	    System.out.println("enter item quantity");
-	    quantity = read.nextInt();
-	    sumItems += quantity;
-	    System.out.println("enter item cost");
-	    cost = read.nextDouble();
-	    totalValue += cost * quantity;
-	    average = totalValue / sumItems;
-			//end inventory evaluation
+			//Begin Inventory Evaluation
+		System.out.println("Number of Item Types:");
+		number = read.nextInt();
 		
+		for(int i = 1; i <= number; i++) {
+			System.out.println("enter the item's description");
+			item = read.next();
+			System.out.println("item description: " + item);
+			System.out.println("enter item quantity");
+			quantity = read.nextInt();
+			sumItems += quantity;
+			System.out.println("enter item cost");
+			cost = read.nextDouble();
+			totalValue += cost * quantity;
+			average = totalValue / sumItems;
+				//end inventory evaluation
+			
+			
+		}  //end for loop	
 		
-		return average;
-	}  //end for loop	
 	} //end while loop
-	} //end method
+		return average;
+} //end method
 	public static void main(String args[]) {
 		
-		
+		displayMenu();
 		
 	//Display results
 	System.out.printf("average cost: $%.2f\n", averageCost());
