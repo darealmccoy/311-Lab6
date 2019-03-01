@@ -15,19 +15,19 @@ public class Inventory {
 	System.out.println("");
 	   // end program menu
 } //end method
-	static double averageCost() {
-			//Declare Variables
-		double average = 0.0;
-		double cost =0.0;
-		double totalValue = 0.0;
-		char answer = 'Y';	
-		
-		int number = 0;
-		int sumItems = 0;
-		int quantity = 0;
-		
-		String item = "";
-			//end declaration of variables
+static double averageCost() {
+		//Declare Variables
+	double average = 0.0;
+	double cost =0.0;
+	double totalValue = 0.0;
+	char answer = 'Y';	
+	
+	int number = 0;
+	int sumItems = 0;
+	int quantity = 0;
+	
+	String item = "";
+		//end declaration of variables
 	
 	
 	while (answer == 'y' || answer == 'Y') {
@@ -54,9 +54,10 @@ public class Inventory {
 	} //end while loop
 		return average;
 } //end method
-	public static void main(String args[]) {
-		
-		displayMenu();
+public static void main(String args[]) {
+	char answer = 'Y';
+	
+	displayMenu();
 		
 	//Display results
 	System.out.printf("average cost: $%.2f\n", averageCost());
@@ -75,6 +76,6 @@ public class Inventory {
 		
 		
 				
-	}         //end main argument
+}         //end main argument
 
 }             //end public class
